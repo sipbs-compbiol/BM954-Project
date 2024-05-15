@@ -1,0 +1,14 @@
+# Ignore R project files
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Ignore Quarto housekeeping, and the static site (as we build live on GitHub Pages)
+/.quarto/
+/_site/
+_freeze
+
+# Ignore macOS files
+.DS_Store
+
