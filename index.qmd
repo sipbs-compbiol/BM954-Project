@@ -19,7 +19,7 @@ Welcome to the SIPBS CompBiol Group BM954 project pages!
 
 ## What is this site for?
 
-This site is designed to assist you as you complete your MSc project and dissertation in the SIPBS CompBiol group. These pages should be read in conjunction with the official SIPBS BM952 Materials available on the course [MyPlace page]({{< var myplace.link >}})
+This site is designed to assist you as you complete your MSc project and dissertation in the SIPBS CompBiol group. These pages should be read in conjunction with the official SIPBS BM954 Materials available on the course [MyPlace page]({{< var myplace.link >}})
 
 We have grouped information under three main headings: 
 
