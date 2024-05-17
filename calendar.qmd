@@ -31,7 +31,7 @@ This is an **indicative** calendar for SIPBS CompBiol Group BM954 projects in {{
 **This calendar is indicative only and subject to change**. Please consult with the official course [MyPlace]({{< var myplace.link >}}) page for submission dates, deadlines, and other timings. Links to useful documents are provided above.
 :::
 
-### Semester 1
+### Summer {{< var ay >}}
 
 | Week  | Date/Time    | Activity                               | Responsibility |
 | ----- | :----------- | :------------------------------------- | :------------: |
