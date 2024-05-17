@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - assets/docs/methods_example_bioinf.pdf
 
 website:
   title: "BM954 Project Pages"
