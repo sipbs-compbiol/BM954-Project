@@ -33,7 +33,7 @@ html:
 8. Figure titles should give a concise "take-home message" conveying the result(s) shown in the figure
 9. Figure legends should give enough detail about the experiment for the reader to understand what was done (the figure should be able to stand on its own)
 
-- [Dr Feeney's guidance on writing good figure titles and legends (with examples)](./assets/docs/FigureTitleLegend.docx)
+- [Dr Feeney's guidance on writing good figure titles and legends (with examples)](./assets/docs/FigureTitleLegend.pdf)
 
 ## A guide to figure preparation
 
