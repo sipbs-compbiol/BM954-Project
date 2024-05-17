@@ -37,6 +37,8 @@ website:
             href: presentation.qmd
           - text: "Science Communication"
             href: scicomm.qmd
+          - text: "Blunt Advice About Writing"
+            href: blunt_writing.qmd
       - icon: github
         href: https://github.com/sipbs-compbiol/BM954-Project
       - icon: twitter
