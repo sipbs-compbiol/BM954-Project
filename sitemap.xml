@@ -2,54 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sipbs-compbiol.github.io/BM954-Project/learning_resources.html</loc>
-    <lastmod>2024-05-17T11:48:37.105Z</lastmod>
+    <lastmod>2024-05-17T11:58:25.421Z</lastmod>
   </url>
   <url>
-    <loc>https://sipbs-compbiol.github.io/BM954-Project/software.html</loc>
-    <lastmod>2024-05-17T11:48:33.513Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/BM954-Project/methods.html</loc>
-    <lastmod>2024-05-17T11:48:30.006Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/BM954-Project/online_resources.html</loc>
-    <lastmod>2024-05-17T11:48:26.574Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/BM954-Project/about.html</loc>
-    <lastmod>2024-05-17T11:48:23.186Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/BM954-Project/scicomm.html</loc>
-    <lastmod>2024-05-17T11:48:19.826Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/BM954-Project/presentation.html</loc>
-    <lastmod>2024-05-17T11:48:16.393Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/BM954-Project/thesis.html</loc>
-    <lastmod>2024-05-17T11:48:18.328Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/BM954-Project/index.html</loc>
-    <lastmod>2024-05-17T11:48:21.463Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/BM954-Project/time_management.html</loc>
-    <lastmod>2024-05-17T11:48:24.865Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sipbs-compbiol.github.io/BM954-Project/figures.html</loc>
-    <lastmod>2024-05-17T11:48:28.326Z</lastmod>
+    <loc>https://sipbs-compbiol.github.io/BM954-Project/blunt_writing.html</loc>
+    <lastmod>2024-05-17T11:58:21.880Z</lastmod>
   </url>
   <url>
     <loc>https://sipbs-compbiol.github.io/BM954-Project/expectations.html</loc>
-    <lastmod>2024-05-17T11:48:31.952Z</lastmod>
+    <lastmod>2024-05-17T11:58:18.331Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/BM954-Project/figures.html</loc>
+    <lastmod>2024-05-17T11:58:14.615Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/BM954-Project/time_management.html</loc>
+    <lastmod>2024-05-17T11:58:11.363Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/BM954-Project/index.html</loc>
+    <lastmod>2024-05-17T11:58:07.644Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/BM954-Project/thesis.html</loc>
+    <lastmod>2024-05-17T11:58:04.217Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/BM954-Project/presentation.html</loc>
+    <lastmod>2024-05-17T11:58:02.347Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/BM954-Project/scicomm.html</loc>
+    <lastmod>2024-05-17T11:58:05.875Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/BM954-Project/about.html</loc>
+    <lastmod>2024-05-17T11:58:09.660Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/BM954-Project/online_resources.html</loc>
+    <lastmod>2024-05-17T11:58:12.979Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/BM954-Project/methods.html</loc>
+    <lastmod>2024-05-17T11:58:16.471Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sipbs-compbiol.github.io/BM954-Project/software.html</loc>
+    <lastmod>2024-05-17T11:58:20.095Z</lastmod>
   </url>
   <url>
     <loc>https://sipbs-compbiol.github.io/BM954-Project/calendar.html</loc>
-    <lastmod>2024-05-17T11:48:35.281Z</lastmod>
+    <lastmod>2024-05-17T11:58:23.788Z</lastmod>
   </url>
 </urlset>
