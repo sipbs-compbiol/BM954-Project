@@ -2,6 +2,11 @@ project:
   type: website
   resources:
     - assets/docs/methods_example_bioinf.pdf
+    - assets/docs/methods_example_exptl.pdf
+    - assets/docs/FigureTitleLegend.pdf
+    - assets/docs/ScientificWritingV39.pdf
+    - assets/slides/Making_model_figures_workshop.pdf
+    - assets/slides/writing_tutorial.pdf
 
 website:
   title: "BM954 Project Pages"
