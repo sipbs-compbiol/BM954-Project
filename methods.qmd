@@ -57,7 +57,7 @@ A few examples of specific conventions:
 -   for science communication projects, the design of your intervention/survey belongs in the methods section
 -   for bioinformatics projects, always include the version number and citation for any software used and details of parameters, etc.
 
-## What I look for when reviewing bioinforamtics methods
+## What I look for when reviewing bioinformatics methods
 
 Overall, I'm looking to understand two things:
 
