@@ -56,3 +56,44 @@ A few examples of specific conventions:
 -   for wet-lab projects, centrifuge speeds are always given in xg, not in rpm or rcf
 -   for science communication projects, the design of your intervention/survey belongs in the methods section
 -   for bioinformatics projects, always include the version number and citation for any software used and details of parameters, etc.
+
+## What I look for when reviewing bioinforamtics methods
+
+Overall, I'm looking to understand two things:
+
+1. Where the data comes from
+2. How the data was processed
+
+### Where the data comes from
+
+The kind of information I need to understand whether the analysis has a sound set of inputs includes:
+
+- what experimental method(s) generated the data (if any)?
+- what database were the data obtained from
+  - as databases and their contents can change over time, this might require a version number or date of access
+  - how were the data identified in the database? Was this a search result (if so, what search terms were used)? If not a search result, how was the data reduced to the subset you're working with?
+- were the data processed after you obtained it?
+  - this might include filtering and QC for sequence reads, for example - or excluding sequences above or below a particular length
+  
+### How the data was processed
+
+There are two overarching components of the research I want to know from your methods section:
+
+1. How was each step of analysis or data processing performed?
+2. How do the individual analyses flow together to take the data from its initial form to a final output?
+
+A flowchart figure (as in [the example linked above](./assets/docs/methods_example_bioinf.pdf)) can be a very simple and effective way to deliver the necessary information for part (2). This doesn't need to have every last bit of detail, but does need to get across to me how the data was taken through each step, in what order, and what general state the data was in between each step.
+
+Especially for involved, complex analyses, the information required to satisfy part (2) can be quite bulky. For any given step in the analysis I want to know:
+
+- what was the input data?
+- what tool was used (e.g. a software package or a script, with an identifiable name)
+- what version of the tool was used (e.g. software version number, or link directly to the script on GitHub)
+- a citation for the software, if it has been published
+- the parameters used for the analysis
+
+There is quite a bit of flexibility, here. It is certainly possible to detail every piece of information in the Methods section of the thesis (or paper), but it is also permissible to put much of the detail into supplementary information or an appendix, or make it available online, _so long as the reader can understand what was done and the information is available to them_.
+
+For example, if you performed each individual step manually at the command-line, it would be reasonable to report each command-line in the Methods section.
+
+Alternatively, you might have automated the analysis into a script, or Galaxy workflow, in which case you could make the script/workflow available online, and put the link into the Methods section. This would mean you only need to outline the analysis process (with tool names, versions, citations, and relevant choices), but could leave the detail of the commands to interested readers who followed the link to the script.
