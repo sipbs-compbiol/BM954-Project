@@ -2,7 +2,7 @@
 title: "Key Dates"
 image: ./assets/images/key_dates.jpg
 description: |
- Key Dates for {{< var ay >}} BM954 BMS MSc Projects
+ Key Dates for {{< var ay >}} BM954 IBioIC Projects
 tbl-colwidths: [5, 10, 50, 5]
 number-sections: true
 about:
@@ -28,11 +28,11 @@ html:
 library(kableExtra)
 ```
 
-- BM954 Project Timeline [(MyPlace {{< bi link >}})]({{< var myplace.timeline >}})
+- IBioIC Project Timeline [(MyPlace {{< bi link >}})]({{< var myplace.timeline_ibioic >}})
 
 ## Calendar
 
-This is an **indicative** calendar for SIPBS CompBiol Group BM954 projects in {{< var ay >}}.
+This is an **indicative** calendar for SIPBS CompBiol Group IBioIC project supervision in {{< var ay >}}.
 
 ::: {.callout-warning}
 **This calendar is indicative only and subject to change**. Please consult with the official course [MyPlace]({{< var myplace.link >}}) page for submission dates, deadlines, and other timings. Links to useful documents are provided above.
@@ -43,9 +43,9 @@ This is an **indicative** calendar for SIPBS CompBiol Group BM954 projects in {{
 ```{r}
 #| echo: False
 
-data <- read.csv("assets/calendars/bm954_calendar.csv")
+data <- read.csv("assets/calendars/ibioic_calendar.csv")
 
-data %>% kable(data="html", escape=F, align="cllc") %>%
+kable(data, align="cllc") %>%
   row_spec(row = 0, color = "white", background = "darkolivegreen") %>%
   column_spec(1, bold=TRUE) %>%
   column_spec(4, bold=TRUE)

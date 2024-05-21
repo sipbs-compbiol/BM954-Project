@@ -18,8 +18,10 @@ website:
         file: index.qmd
       - text: "Project Guidance"
         menu: 
-          - text: "Key Dates"
+          - text: "Key Dates (BM954)"
             href: calendar.qmd
+          - text: "Key Dates (IBioIC)"
+            href: calendar_ibioic.qmd
           - text: "Project Expectations"
             href: expectations.qmd
           - text: "Project and Time Management"
