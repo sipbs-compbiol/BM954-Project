@@ -48,5 +48,6 @@ data <- read.csv("assets/calendars/bm954_calendar.csv")
 data %>% kable(data="html", escape=F, align="cllc") %>%
   row_spec(row = 0, color = "white", background = "darkolivegreen") %>%
   column_spec(1, bold=TRUE) %>%
-  column_spec(4, bold=TRUE)
+  column_spec(4, bold=TRUE) %>%
+  kable_styling()
 ```
