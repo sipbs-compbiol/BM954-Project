@@ -3,6 +3,7 @@
 .Rhistory
 .RData
 .Ruserdata
+.Rbuildignore
 
 # Ignore Quarto housekeeping, and the static site (as we build live on GitHub Pages)
 /.quarto/
