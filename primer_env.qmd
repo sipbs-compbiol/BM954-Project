@@ -1,0 +1,291 @@
+---
+title: "Primer: Environment Setup"
+image: ./assets/images/primer_env.jpg
+description: |
+ Setting up your computational environment for the {{< var ay >}} project
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true
+---
+
+This page runs through the process of setting up a computing environment similar to that you will need for your {{< var ay >}} project.
+
+::: { .callout-important }
+## Prerequisites
+
+This primer assumes the following:
+
+- **you are working on your own computer** (e.g. a laptop/desktop machine)
+- **you are able to start a terminal window** (e.g. `Terminal` on a Mac or Linux machine, or in Windows Subsystem Linux)
+
+You should either **be familiar with the command-line or have worked through the Software Carpentries shell lesson**:
+
+- [SWC Shell lesson](https://swcarpentry.github.io/shell-novice/)
+:::
+
+The primer walks through the following steps:
+
+1. Downloading the SIPBSCompBiol project template repository
+2. Creating and activating a `conda` environment for your project
+3. Installing the `ncbi-genome-download` package and using it to download a set of genomes
+
+## Set up a project folder from a template
+
+::: { .callout-note }
+Please read the Noble (2009) and Sandve _et al._ (2013) papers at the Ten Great Papers page, and the `README.md` file at the [template repository]() to understand the principles behind the organisation of this template.
+
+- [Ten Great Papers](https://widdowquinn.github.io/ten_great_papers/)
+- [Bioinformatics project template](https://sipbs-compbiol.github.io/template_bioinformatics_project/)
+- [Noble (2009)](http://doi.org/10.1371/journal.pcbi.1000424)
+- [Sandve _et al._ (2013)](http://doi.org/10.1371/journal.pcbi.1003285)
+:::
+
+### Download and extract the project template
+
+1. Use your browser to visit the project template repository at [https://github.com/sipbs-compbiol/template_bioinformatics_project](https://github.com/sipbs-compbiol/template_bioinformatics_project).
+2. Click on the small triangle at the right of the green `Code` button to see the download options for the template.
+
+![Context menu for the `Code` download button](assets/images/primer_01.png)
+
+3. Click on `Download ZIP` to download a `.zip` format compressed file containing the repository template to your own computer, in the usual way you would download a file using your browser. This will place a file called `template_bioinformatics_project-master.zip` into that location.
+
+::: { .callout-tip collapse="true" }
+## Where should I save this file?
+
+When you uncompress the repository template, it will expand into the full set of folders and subfolders. You can move this folder tree _after_ you have uncompressed the file, or you can move the `.zip` file to the directory where you want to keep the project files (e.g. under `Documents` on a Mac), and uncompress it there. The choice is yours.
+:::
+
+4. Uncompress the file (e.g. by double-clicking on a Mac). This will produce a folder called `template_bioinformatics_project-master` in the same folder as the compressed file.
+
+::: { .callout-warning }
+## Make sure you acturally uncompress the file
+
+Some operating systems, such as Windows, allow you to work with compressed files _as if they had been uncompressed_ without _actually_ uncompressing them.
+
+**You do need to fully uncompress the repository template to work with it.**
+:::
+
+5. Start a terminal and navigate to the top-level folder in the repository template.
+
+::: { .callout-tip }
+I saved the `.zip` file in the `Documents` folder on my computer, and uncompressed that file in the same location. My project template is therefore in the `~/Documents/template_bioinformatics_project-master` directory. I can navigate to this location using the `cd` command, and check the contents using the command `ls`.
+
+[**NOTE**: The `%` symbol is the command prompt, _not_ part of the command itself. This may look different on your computer (e.g. it might be a dollar sign: `$`).]
+
+```{bash}
+% cd ~/Documents/template_bioinformatics_project-master
+% ls
+LICENSE      README.md    _config.yml  assets/      data/        docs/        notebooks/   results/     scripts/
+```
+:::
+
+## Create and activate a `conda` environment for your project
+
+::: { .callout-warning }
+Before beginning this part of the guide, you should make yourself familiar with the `conda` documentation at the link below:
+
+- [`conda` tutorial](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html)
+:::
+
+::: { .callout-important }
+## You will need to have already installed the `conda` package for your operating system.
+
+On Mac and Linux, this is usually a straightforward software installation, and you can follow the instructions at the link below:
+
+- [Installing Anaconda on Mac and Linux](https://docs.anaconda.com/free/anaconda/install/index.html)
+
+On Windows, you _must_ distinguish between installing Anaconda under Windows, and installing it under WSL (Windows Subsystem Linux). You will be using WSL for your project, and you **must** install `conda` within WSL (WSL _cannot_ see the version of `conda` installed under the Windows operating system; in any case the software that runs on a Linux OS will not typically run on a Windows OS). There are several online guides to help with this.
+
+- [Installing Conda/Anaconda in WSL](https://www.how2shout.com/how-to/install-anaconda-wsl-windows-10-ubuntu-linux-app.html)
+- [Installing Miniconda in WSL](https://kontext.tech/article/1064/install-miniconda-and-anaconda-on-wsl-2-or-linux)
+:::
+
+1. Create a new `conda` environment by issuing the command below. 
+
+```{bash}
+% conda create --name bm954_project -y
+```
+
+::: { .callout-note collapse="true" }
+## Breaking down the components of the command line
+
+As above, the `%` symbol is the _command prompt_ - not part of the command itself. You do not type this when entering and running your command.
+
+- `conda`: you are running the `conda` program and instructing it to carry out an action
+- `create`: this is the action you are instructing `conda` to undertake, to _create_ a new environment
+- `--name bm954_project`: this _option_ tells `conda` what name the new environment is to be known by; you can choose any name you like, and do not have to use `bm954_project` if you would prefer to use something else. However, it is usually a good idea to name the environment such that you can tell immediately what it is used for
+- `-y`: this answers all the optional questions about installation which `conda` might ask with "_yes_"
+:::
+
+2. Activate the new `conda` environment you have just created by issuing the command below (if you called your environment something other than `bm954_project`, then use that name instead, here).
+
+```{bash}
+% conda activate bm954_project
+```
+
+You should notice that the left-most part of your command prompt changes from `(base)` to `(bm954_project)` (or whatever name you used for your environment).
+
+::: { .callout-tip collapse="true"}
+## How to check what environments are available
+
+You can use the command `conda info --envs` (demonstrated below) to list all the environments that your installation of `conda` is aware of:
+
+```{bash}
+% conda info --envs
+# conda environments:
+#
+base                     /Users/lpritc/opt/anaconda3
+2022_david               /Users/lpritc/opt/anaconda3/envs/2022_david
+2022_nora                /Users/lpritc/opt/anaconda3/envs/2022_nora
+algo_2022_py39           /Users/lpritc/opt/anaconda3/envs/algo_2022_py39
+aoc2021                  /Users/lpritc/opt/anaconda3/envs/aoc2021
+aoc2022                  /Users/lpritc/opt/anaconda3/envs/aoc2022
+aoc2023                  /Users/lpritc/opt/anaconda3/envs/aoc2023
+bm432_py310              /Users/lpritc/opt/anaconda3/envs/bm432_py310
+bm954_project         *  /Users/lpritc/opt/anaconda3/envs/bm954_proj
+[...]
+```
+:::
+
+## Install `ncbi-genome-download` and recover some genomes
+
+One of the main advantages of `conda` is that it handles technical issues of _package management_ (the process of installing and configuring software tools) and makes using them much easier. The typical command we might use would be `conda install <PROGRAM NAME>` where `<PROGRAM NAME>` is replaced by the name of the software you want to install.
+
+In particular, `conda` is a common software distribution route for bioinformatics software, through the `conda` _channel_ called [`bioconda`](https://bioconda.github.io/).
+
+::: { .callout-important }
+In order to use `bioconda` on your computer, you will need to configure the channel.
+:::
+
+### Configuring the `bioconda` channel
+
+::: { .callout-warning }
+Before installing `bioconda` you should be awware of the information at the link below:
+
+- [`bioconda` tutorial](https://bioconda.github.io/tutorials/index.html)
+:::
+
+To set up the `bioconda` channel on your computer, you should follow the instructions at the [`bioconda` website](https://bioconda.github.io/), and issue the four commands below, in sequence:
+
+```{bash}
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+```
+
+You only need to do this once on your computer, and `bioconda` will then be available in any environment you create.
+
+### Installing `ncbi-genome-download`
+
+To install the `ncbi-genome-download` package, we use the `conda install` command, as noted above. This will take a short while to download and configure all the _dependencies_ of the tool (packages that need to be installed for the software to run). The process you see in the terminal should resemble that shown below.
+
+```{bash}
+ % conda install ncbi-genome-download -y
+ Channels:
+ - conda-forge
+ - bioconda
+ - defaults
+Platform: osx-64
+Collecting package metadata (repodata.json):
+[...]
+The following NEW packages will be INSTALLED:
+
+  appdirs            conda-forge/noarch::appdirs-1.4.4-pyh9f0ad1d_0
+[...]
+  xz                 conda-forge/osx-64::xz-5.2.6-h775f41a_0
+
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+```
+
+Once this is complete, the `ncbi-genome-download` program should be available to you. You can test this by asking the software for its help guide, using the command `ncbi-genome-download -h` as demonstrated below:
+
+```{bash}
+% ncbi-genome-download -h
+usage: ncbi-genome-download [-h] [-s {refseq,genbank}] [-F FILE_FORMATS] [-l ASSEMBLY_LEVELS] [-g GENERA] [--genus GENERA]
+                            [--fuzzy-genus] [-S STRAINS] [-T SPECIES_TAXIDS] [-t TAXIDS] [-A ASSEMBLY_ACCESSIONS]
+                            [--fuzzy-accessions] [-R REFSEQ_CATEGORIES] [--refseq-category REFSEQ_CATEGORIES] [-o OUTPUT]
+                            [--flat-output] [-H] [-P] [-u URI] [-p N] [-r N] [-m METADATA_TABLE] [-n] [-N] [-v] [-d] [-V]
+                            [-M TYPE_MATERIALS]
+                            groups
+[...]
+```
+
+### Downloading a set of genome sequences
+
+::: { .callout-warning }
+Before downloading genomes, you should familiarise yourself with the information at the links below:
+
+- [NCBI Assembly Level definitions](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/glossary/#assembly-level)
+- [`ncbi-genome-download` documentation](https://github.com/kblin/ncbi-genome-download/blob/master/README.md)
+- [NCBI genome file formats](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/reference-docs/file-formats/)
+:::
+
+For your project, you will want to download all complete genome sequences for a single genus of bacteria. This section of the guide will illustrate that process for the genus _Dickeya_.
+
+The command to download all genomes of a single named genus of bacteria is `ncbi-genome-download --genera "<GENUS>" bacteria`, where `<GENUS>` is replaced by the actual name of the genus you want to download.
+
+To restrict downloaded genomes only to those that are _complete_, we use the option `--assembly-levels complete`.
+
+To download all available sequence data, including GBFF (annotated) and FASTA (sequence data only) we need to use the option `--formats all`
+
+If we wanted the program to keep us informed about what it was doing, we would ask it to be _verbose_ by using the option `--verbose` or `-v`
+
+Putting this together to download genomes for the genus _Dickeya_ we would use the command as demonstrated below:
+
+```{bash}
+% ncbi-genome-download --assembly-levels complete --genera "Dickeya" --formats all --verbose bacteria
+```
+
+This will place the downloaded genomes into individual subdirectories, under the subdirectory `refseq`. These genome are compressed using the `gzip` program. We can tell this because the filnames end in `.gz`. 
+
+```{bash}
+ % tree refseq
+refseq
+└── bacteria
+    ├── GCF_000147055.1
+    │   ├── GCF_000147055.1_ASM14705v1_assembly_report.txt
+    │   ├── GCF_000147055.1_ASM14705v1_assembly_stats.txt
+    │   ├── GCF_000147055.1_ASM14705v1_cds_from_genomic.fna.gz
+    │   ├── GCF_000147055.1_ASM14705v1_feature_table.txt.gz
+    │   ├── GCF_000147055.1_ASM14705v1_genomic.fna.gz
+    │   ├── GCF_000147055.1_ASM14705v1_genomic.gbff.gz
+    │   ├── GCF_000147055.1_ASM14705v1_genomic.gff.gz
+    │   ├── GCF_000147055.1_ASM14705v1_protein.faa.gz
+    │   ├── GCF_000147055.1_ASM14705v1_protein.gpff.gz
+    │   ├── GCF_000147055.1_ASM14705v1_rna_from_genomic.fna.gz
+    │   ├── GCF_000147055.1_ASM14705v1_translated_cds.faa.gz
+[...]    
+```
+
+The downloaded files are in a number of different formats, and you will not need to use all of them in your project.
+
+## Summary
+
+This page provided a gude to setting up your project analogously to preparing your bench for laboratory work.
+
+You first used a template to set up your project's folder structure, which is a little like making sure you have a well-organised work area.
+
+You then installed `conda` and set up a new environment for your project, which plays a similar role to making your your bench is clean and practising a kind of "aseptic technique" for making sure that installed bioinformatics tools don't conflict with each other.
+
+You then installed `ncbi-genome-download` and obtained a set of bacterial genomes directly from NCBI. This is similar to acquiring a set of strains from a collection, and having them ready to work with on your benchtop.
+
+Your next steps using these genomes will be to prepare them so that they can be used in your experiments.
