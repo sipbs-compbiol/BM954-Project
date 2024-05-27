@@ -84,7 +84,7 @@ I saved the `.zip` file in the `Documents` folder on my computer, and uncompress
 
 [**NOTE**: The `%` symbol is the command prompt, _not_ part of the command itself. This may look different on your computer (e.g. it might be a dollar sign: `$`).]
 
-```{bash}
+```bash
 % cd ~/Documents/template_bioinformatics_project-master
 % ls
 LICENSE      README.md    _config.yml  assets/      data/        docs/        notebooks/   results/     scripts/
