@@ -114,7 +114,7 @@ On Windows, you _must_ distinguish between installing Anaconda under Windows, an
 
 1. Create a new `conda` environment by issuing the command below. 
 
-```{bash}
+```bash
 % conda create --name bm954_project -y
 ```
 
@@ -131,7 +131,7 @@ As above, the `%` symbol is the _command prompt_ - not part of the command itsel
 
 2. Activate the new `conda` environment you have just created by issuing the command below (if you called your environment something other than `bm954_project`, then use that name instead, here).
 
-```{bash}
+```bash
 % conda activate bm954_project
 ```
 
@@ -142,7 +142,7 @@ You should notice that the left-most part of your command prompt changes from `(
 
 You can use the command `conda info --envs` (demonstrated below) to list all the environments that your installation of `conda` is aware of:
 
-```{bash}
+```bash
 % conda info --envs
 # conda environments:
 #
@@ -179,7 +179,7 @@ Before installing `bioconda` you should be awware of the information at the link
 
 To set up the `bioconda` channel on your computer, you should follow the instructions at the [`bioconda` website](https://bioconda.github.io/), and issue the four commands below, in sequence:
 
-```{bash}
+```bash
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
@@ -192,7 +192,7 @@ You only need to do this once on your computer, and `bioconda` will then be avai
 
 To install the `ncbi-genome-download` package, we use the `conda install` command, as noted above. This will take a short while to download and configure all the _dependencies_ of the tool (packages that need to be installed for the software to run). The process you see in the terminal should resemble that shown below.
 
-```{bash}
+```bash
  % conda install ncbi-genome-download -y
  Channels:
  - conda-forge
@@ -218,7 +218,7 @@ Executing transaction: done
 
 Once this is complete, the `ncbi-genome-download` program should be available to you. You can test this by asking the software for its help guide, using the command `ncbi-genome-download -h` as demonstrated below:
 
-```{bash}
+```bash
 % ncbi-genome-download -h
 usage: ncbi-genome-download [-h] [-s {refseq,genbank}] [-F FILE_FORMATS] [-l ASSEMBLY_LEVELS] [-g GENERA] [--genus GENERA]
                             [--fuzzy-genus] [-S STRAINS] [-T SPECIES_TAXIDS] [-t TAXIDS] [-A ASSEMBLY_ACCESSIONS]
@@ -251,13 +251,13 @@ If we wanted the program to keep us informed about what it was doing, we would a
 
 Putting this together to download genomes for the genus _Dickeya_ we would use the command as demonstrated below:
 
-```{bash}
+```bash
 % ncbi-genome-download --assembly-levels complete --genera "Dickeya" --formats all --verbose bacteria
 ```
 
 This will place the downloaded genomes into individual subdirectories, under the subdirectory `refseq`. These genome are compressed using the `gzip` program. We can tell this because the filnames end in `.gz`. 
 
-```{bash}
+```bash
  % tree refseq
 refseq
 └── bacteria
