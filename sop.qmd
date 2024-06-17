@@ -1,6 +1,6 @@
 ---
 title: "BM954 SOPs"
-image: ./assets/images/key_dates.jpg
+image: ./assets/images/sops.jpg
 description: |
  SOPs for {{< var ay >}} BM954 BMS MSc Projects
 tbl-colwidths: [5, 10, 50, 5]
@@ -213,22 +213,98 @@ The walkthrough is using the name of the alias to the database file, rather than
 You may see several messages relating to `Batch contains an accession no longer listed in NCBI` or `Querying NCBI returns the error` - this may affect individual records but does not otherwise indicate a problem with the download.
 :::
 
-## Extracting GenBank sequence data from the local CAZy database
+## Extracting GenBank sequence data from a local CAZy database
 
 `cazy_webscraper` provides commands that allow you to convert data from the database to a format useful in downstream bioinformatics programs. Please read the documentation at:
 
 - [`cazy_webscraper` documentation](https://cazy-webscraper.readthedocs.io/en/latest/sequence.html)
+
+To complete this part of the data extraction for multiple families in a reasonable amount of time you will need to get a list of the CAZy families present in the data you downloaded - this will need you to execute a small amount of SQL code in the databse. You will also need to use a shell script to automate extracting the sequence data for each family.
+
+::: { .callout-note }
+The walkthrough below will guide you through the small amount of SQL necessary to get a list of families.
+
+A shell script file will be provided to help you use the list to extract the sequence data, but there are no commands that you have not met already, if you worked through the Carpentries shell and SQL lessons.
+
+- [Carpentries Unix Shell Lessons](https://swcarpentry.github.io/shell-novice/)
+  - [Loops in the shell](https://swcarpentry.github.io/shell-novice/05-loop.html)
+  - [Scripts in the shell](https://swcarpentry.github.io/shell-novice/06-script.html)
+- [Carpentries SQL Lessons]()  
+:::
 
 ### Walkthrough
 
 ```bash
 # Extract all GenBank sequences from the local CAZy database
 (MSc_Project) $ cw_extract_db_seqs cazydb.db genbank --fasta_file seqs/all_sequences.fasta
-# Extract only GH36 sequences from the local CAZy database
+# Extract only GH3 sequences from the local CAZy database
 (MSc_Project) $ cw_extract_db_seqs cazydb.db genbank --fasta_file GH3/GH3_sequences.fasta --families GH3
-
 ```
 
 ::: { .callout-warning }
 Please be sure to include a directory (e.g. the `seqs` in `seqs/all_sequences.fasta`) when using the `cw_extract_db_seqs` command, or else it may attempt to delete the contents of the current directory.
 :::
+
+To obtain the list of CAZy families present in the current database, you need to open your database file, e.g.
+
+```bash
+# Open the cazydb.db file in sqlite3
+(MSc_Project) $ sqlite3 cazydb.db
+SQLite version 3.43.2 2023-10-10 13:08:14
+Enter ".help" for usage hints.
+sqlite>
+```
+
+This will drop you into an SQL prompt for the database interpreter - that is what starts with `sqlite>` in the example above.
+
+To extract the list of families you need to do two things:
+
+1. Tell `sqlite3` the name of the file to write to
+2. Perform the database query (the result will be written to the file you named)
+
+```sql
+# Tell sqlite what file to write output to
+sqlite> .output cazy_families.txt
+# Select all families from the `CazyFamilies` table
+sqlite> SELECT family FROM CazyFamilies;
+# Quite sqlite3
+sqlite> .exit
+```
+
+This will write the list of CAZy family names found in the database to the file `cazy_families.txt`, which you can confirm by looking at the first few lines.
+
+```bash
+# Peek at the first few lines of the cazy_families.txt file
+(MSc_Project) $ head cazy_families.txt
+GH26
+GH94
+GT1
+GT121
+GT32
+```
+
+We can use this file with a short script to extract all sequences from the database for each of the CAZy families. The content of this script file is:
+
+```bash
+FILE="./cazy_families.txt"
+
+while read family
+do
+  echo "Writing sequences for ${family}"
+  cmd="cw_extract_db_seqs cazydb.db genbank --fasta_file ${family}/${family}_sequences.fasta --families ${family}"
+  ${cmd}
+done < ${FILE}
+```
+
+You can download this script from the link below (right click on the link and choose `Save Link As...` or similar from the context menu)
+
+- [`extract_families.sh`](./assets/scripts/extract_families.sh)
+
+Once the script is downloaded, you can run it with the command
+
+```bash
+# Run the downloaded Bash script to extract CAZy family sequences from the database
+(MSc_Project) $ sh extract_families.sh
+```
+
+You should see the output from multiple extraction runs on your screen, as the sequences are extracted.
