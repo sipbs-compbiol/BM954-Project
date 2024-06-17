@@ -20,6 +20,8 @@ website:
         menu: 
           - text: "Key Dates (BM954)"
             href: calendar.qmd
+          - text: "SOP (BM954)"
+            href: sop.qmd
           - text: "Key Dates (IBioIC)"
             href: calendar_ibioic.qmd
           - text: "Project Expectations"

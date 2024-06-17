@@ -1,0 +1,234 @@
+---
+title: "BM954 SOPs"
+image: ./assets/images/key_dates.jpg
+description: |
+ SOPs for {{< var ay >}} BM954 BMS MSc Projects
+tbl-colwidths: [5, 10, 50, 5]
+number-sections: true
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/scompbiol
+    - icon: github
+      text: Github
+      href: https://github.com/sipbs-compbiol
+    - icon: envelope
+      text: Email
+      href: mailto:leighton.pritchard@strath.ac.uk
+html:
+  anchor-sections: true      
+---
+
+This page outlines SOPs (Standard Operating Procedures) for the {{< var ay >}} BM954 BMS MSc Projects. Please use the menu in the sidebar to navigate to specific sections and activities.
+
+In general, the SOPs will provide links to detailed instructions and documentation, and then provide a short walkthrough that can be used as an example from which to begin your own work. This is _not_ a set of instructions for how to carry out your research project.
+
+::: { .callout-important }
+All activities/procedures on this page assume that you are working on a Linux (including Windows Subsystem Linux) or macOS machine. These instructions have not been tested on a Windows OS.
+:::
+
+## Installing `conda` and `bioconda`
+
+First, please see the instructions at the following locations:
+
+- [Installing `conda` on macOS](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html)
+- [Installing `conda` on Linux](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
+- [Installing `bioconda`](https://bioconda.github.io/)
+
+### Walkthrough (Linux)
+
+#### Installing `conda`:
+
+```bash
+# Work in your home directory
+$ cd ~
+# Download the miniconda installer
+$ wget https://repo.anaconda.com/miniconda/Miniconda3-py312_24.4.0-0-Linux-x86_64.sh
+# Run the miniconda installer
+$ bash Miniconda3-py312_24.4.0-0-Linux-x86_64.sh
+```
+
+After executing the last command in the example above, you will be prompted for information and responses. If you are uncertain what to respond with, use the defaults (i.e. press `Return`)
+
+::: { .callout-tip }
+When the installation is finished, `conda` will be installed, but not immediately available.
+
+To make `conda` available, close your terminal window, then open a new terminal window. You should see that your command prompt changes from something like:
+
+```bash
+$
+```
+
+to something like
+
+```bash
+(base) $
+```
+
+That is, you should see that the terminal now recognises you are working in a conda environment called `base`
+:::
+
+#### Installing `bioconda`
+
+```bash
+# Add the conda channels needed for bioconda
+(base) $ conda config --add channels defaults
+(base) $ conda config --add channels bioconda
+(base) $ conda config --add channels conda-forge
+(base) $ conda config --set channel_priority strict
+```
+
+You may see messages from the software during this process. Unless there are obvious error messages, there should be nothing to be concerned about.
+
+## Creating and activating a `conda` environment for your project
+
+First, please see the instructions at the following location
+
+- https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+### Walkthrough
+
+```bash
+# Create a new conda environment called "MSc_Project"
+(base) $ conda create --name MSc_Project -y
+(base) $ conda activate MSc_Project
+```
+
+::: { .callout-important }
+The name `MSc_Project` is chosen for the example, but you can call your project environment anything you like - but it is usually good practice to name it so that it's obvious what you are working on.
+:::
+
+::: { .callout-note }
+The `-y` argument used in the command above answers "yes" to all the yes/no questions `conda` may ask during the installaion.
+:::
+
+::: { .callout-tip }
+After activating the `MSc_Project` environment, you should see that your command prompt changes from something like:
+
+```bash
+(base) $
+```
+
+to something like
+
+```bash
+(MSc_Project) $
+```
+
+That is, you should see that the terminal now recognises you are working in a conda environment called `MSc_Project`
+:::
+
+::: { .callout-important }
+You should carry out all the work for your project while in your project environment.
+:::
+
+## Installing `cazy_webscraper`
+
+`cazy_webscraper` is a software package that will help you download the complete CAZy online database to your computer, and
+
+1. extract data from the local database
+2. incorporate data from other online databases into your local database
+
+::: { .callout-important }
+You should carry out all the work for your project while in your project environment.
+:::
+
+### Walkthrough
+
+```bash
+# cazy_webscraper is available through bioconda, so use conda to install it
+(MSc_Project) $ conda install cazy_webscraper bioservices -y
+```
+
+::: { .callout-note }
+The `-y` argument used in the command above answers "yes" to all the yes/no questions `conda` may ask during the installaion.
+:::
+
+## Downloading a CAZy database
+
+Please read the documentation at the following links:
+
+- [`cazy_webscraper` documentation](https://cazy-webscraper.readthedocs.io/en/latest/)
+- [`cazy_webscraper` GitHub repository](https://github.com/HobnobMancer/cazy_webscraper)
+
+### Walkthrough
+
+```bash
+# Download the complete CAZy database
+(MSc_Project) $ cazy_webscraper use.your.actual@email.address.here
+# Download a CAZy database only for the genus Ochrobactrum
+(MSc_Project) $ cazy_webscraper --species Ochrobactrum use.your.actual@email.address.here
+```
+
+::: { .callout-important }
+Be sure to replace the text in the example that reads `use.your.actual@email.address.here` with your actual email address.
+
+If you want to download CAZy data for a different genus or species, then replace `Ochrobactrum` with your target taxon name.
+:::
+
+This will create a new `SQLite3` database in your current directory with a name like `cazy_webscraper_2024-06-17_08-43-52.db` (but substituting the date and time with the date and time that you ran the program). That's quite a lot to type in each time you want to use it, so you can use a _symbolic link_ to make an alias to the database with a shorter name, as below.
+
+```bash
+# Make a short name alias (`cazydb.db`) for the local CAZy database
+(MSc_Project) $ ln -s cazy_webscraper_2024-06-17_08-43-52.db cazydb.db
+```
+
+::: { .callout-important }
+Be sure to replace the filename in the example (`cazy_webscraper_2024-06-17_08-43-52.db`) with your actual database's filename.
+:::
+
+::: { .callout-tip }
+You can check that the alias has been created using the `ls` command to list the contents of the current directory:
+
+```bash
+(MSc_Project) $ ls -l
+total 368
+-rw-r--r--  1 lpritc  staff   184K 17 Jun 08:45 cazy_webscraper_2024-06-17_08-43-52.db
+lrwxr-xr-x  1 lpritc  staff    38B 17 Jun 08:46 cazydb.db@ -> cazy_webscraper_2024-06-17_08-43-52.db
+```
+:::
+
+## Adding GenBank sequence data to the local CAZy database
+
+`cazy_webscraper` provides commands that download sequence data from GenBank, for each sequence in the local CAZy database. Please read the documentation at:
+
+- [`cazy_webscraper` documentation](https://cazy-webscraper.readthedocs.io/en/latest/genbank.html)
+
+### Walkthrough
+
+```bash
+# Download the corresponding UniProt protein sequence for each protein in the local CAZy database
+(MSc_Project) $ cw_get_genbank_seqs cazydb.db use.your.actual@email.address.here
+```
+
+::: { .callout-important }
+Be sure to replace the text in the example that reads `use.your.actual@email.address.here` with your actual email address.
+:::
+
+::: { .callout-note }
+The walkthrough is using the name of the alias to the database file, rather than the actual database filename.
+
+You may see several messages relating to `Batch contains an accession no longer listed in NCBI` or `Querying NCBI returns the error` - this may affect individual records but does not otherwise indicate a problem with the download.
+:::
+
+## Extracting GenBank sequence data from the local CAZy database
+
+`cazy_webscraper` provides commands that allow you to convert data from the database to a format useful in downstream bioinformatics programs. Please read the documentation at:
+
+- [`cazy_webscraper` documentation](https://cazy-webscraper.readthedocs.io/en/latest/sequence.html)
+
+### Walkthrough
+
+```bash
+# Extract all GenBank sequences from the local CAZy database
+(MSc_Project) $ cw_extract_db_seqs cazydb.db genbank --fasta_file seqs/all_sequences.fasta
+# Extract only GH36 sequences from the local CAZy database
+(MSc_Project) $ cw_extract_db_seqs cazydb.db genbank --fasta_file GH3/GH3_sequences.fasta --families GH3
+
+```
+
+::: { .callout-warning }
+Please be sure to include a directory (e.g. the `seqs` in `seqs/all_sequences.fasta`) when using the `cw_extract_db_seqs` command, or else it may attempt to delete the contents of the current directory.
+:::
