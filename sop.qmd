@@ -298,7 +298,7 @@ done < ${FILE}
 
 You can download this script from the link below (right click on the link and choose `Save Link As...` or similar from the context menu)
 
-- [`extract_families.sh`](./assets/scripts/extract_families.sh)
+- [`extract_families.sh`](https://raw.githubusercontent.com/sipbs-compbiol/BM954-Project/main/assets/scripts/extract_families.sh)
 
 Once the script is downloaded, you can run it with the command
 
