@@ -1,5 +1,5 @@
 ---
-title: "Key Dates"
+title: "Key Dates (IBioIC)"
 image: ./assets/images/key_dates.jpg
 description: |
  Key Dates for {{< var ay >}} BM954 IBioIC Projects
@@ -35,7 +35,7 @@ library(kableExtra)
 This is an **indicative** calendar for SIPBS CompBiol Group IBioIC project supervision in {{< var ay >}}.
 
 ::: {.callout-warning}
-**This calendar is indicative only and subject to change**. Please consult with the official course [MyPlace]({{< var myplace.link >}}) page for submission dates, deadlines, and other timings. Links to useful documents are provided above.
+This calendar is based on the IBioIC project guidelines document, but is **indicative only and subject to change**indicative only and subject to change**. Please consult with the official course [MyPlace]({{< var myplace.link >}}) page for submission dates, deadlines, and other timings. Links to useful documents are provided above.
 :::
 
 ### Summer {{< var ay >}}

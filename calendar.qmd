@@ -45,7 +45,8 @@ This is an **indicative** calendar for SIPBS CompBiol Group BM954 projects in {{
 
 data <- read.csv("assets/calendars/bm954_calendar.csv")
 
-data %>% kable(data="html", escape=F, align="cllc") %>%
+data %>% 
+  kable(format="html", escape=FALSE, align="cllc") %>%
   row_spec(row = 0, color = "white", background = "darkolivegreen") %>%
   column_spec(1, bold=TRUE) %>%
   column_spec(4, bold=TRUE) %>%
