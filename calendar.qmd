@@ -38,6 +38,21 @@ This is an **indicative** calendar for SIPBS CompBiol Group BM954 projects in {{
 **This calendar is indicative only and subject to change**. Please consult with the official course [MyPlace]({{< var myplace.link >}}) page for submission dates, deadlines, and other timings. Links to useful documents are provided above.
 :::
 
+::: {.callout-important}
+The university is closed on the following dates:
+
+- 2025-05-26
+- 2025-07-18
+- 2025-07-21
+:::
+
+::: {.callout-important}
+Dr Pritchard is unavailable on the following dates:
+
+- 2025-06-06
+- 2025-07-22 to 2025-07-24
+:::
+
 ### Summer {{< var ay >}}
 
 ```{r}
@@ -45,7 +60,8 @@ This is an **indicative** calendar for SIPBS CompBiol Group BM954 projects in {{
 
 data <- read.csv("assets/calendars/bm954_calendar.csv")
 
-data %>% kable(data="html", escape=F, align="cllc") %>%
+data %>% 
+  kable(format="html", escape=FALSE, align="cllc") %>%
   row_spec(row = 0, color = "white", background = "darkolivegreen") %>%
   column_spec(1, bold=TRUE) %>%
   column_spec(4, bold=TRUE) %>%
