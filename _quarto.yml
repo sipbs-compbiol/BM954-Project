@@ -46,6 +46,8 @@ website:
             href: figures.qmd
           - text: "Writing Bioinformatics Methods"
             href: methods.qmd
+          - text: "On LLMs, ChatGPT, etc."
+            href: llms.qmd
           - text: "Presentation"
             href: presentation.qmd
           - text: "Science Communication"
