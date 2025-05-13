@@ -38,6 +38,21 @@ This is an **indicative** calendar for SIPBS CompBiol Group IBioIC project super
 This calendar is based on the IBioIC project guidelines document, but is **indicative only and subject to change**indicative only and subject to change**. Please consult with the official course [MyPlace]({{< var myplace.link >}}) page for submission dates, deadlines, and other timings. Links to useful documents are provided above.
 :::
 
+::: {.callout-important}
+The university is closed on the following dates:
+
+- 2025-05-26: university closed
+- 2025-07-18: university closed
+- 2025-07-21: university closed
+:::
+
+::: {.callout-important}
+Dr Pritchard is unavailable on the following dates:
+
+- 2025-06-06
+- 2025-07-22 to 2025-07-24
+:::
+
 ### Summer {{< var ay >}}
 
 ```{r}
