@@ -23,13 +23,13 @@ html:
 This may be your first time working on a scientific project, and maybe even your first time producing a scientific document (your project dissertation). The guide below is intended to help you understand what to expect, and should be read in conjunction with the project student learning agreement [(MyPlace {{< bi link >}})]({{< var myplace.guidelines >}}).
 
 ::: {.callout-note}
-Please read through these expectations and guidelines and bring any questions or concerns that you would like to discuss with Dr. Pritchard to our first meeting.
+Please read through these expectations and guidelines and bring any questions or concerns that you would like to discuss with Dr. Pritchard and Dr. Feeney to our first meeting.
 :::
 
 ## Conducting Your Project
 
-- Some [general advice about the group {{< bi link >}}](https://sipbs-compbiol.github.io/student/so_youre_a_project_student/)
-- [How to avoid cognitive overload {{< bi link >}}](https://sipbs-compbiol.github.io/student/avoid-cognitive-overload/)
+- Some [general advice about the group {{< bi link >}}](https://sipbs-compbiol.github.io/posts/2022-09-18-so_youre_a_project_student.html)
+- [How to avoid cognitive overload {{< bi link >}}](https://sipbs-compbiol.github.io/posts/2022-06-02-avoid-cognitive-overload.html)
 
 
 ### Science
@@ -43,15 +43,15 @@ Please read through these expectations and guidelines and bring any questions or
   - It's a common view in computation biology that, if there are not three copies of your data/work (ideally in two physical locations), it might as well not exist.
 :::
   
-- **At the end of the project, I expect you to provide me with the raw data files from your work.** For example:
-  - For a phylogenetic tree, I expect: the `.fasta` file containing the unaligned sequences; the multiple sequence alignment used to construct the tree (`.fasta`, `.msa`, etc.); and the `.newick` (or `.nex`) file for the tree. This is required so that projects can be continued and built upon in future years.
-  - You may find it most convenient to manage your project using standard computational biology tools, such as version control (e.g. `git` and GitHub). I would also find that convenient and strongly recommend it.
+- **At the end of the project, we expect you to provide us with the raw data files, and the outputs, from your work.** For example:
+  - For a phylogenetic tree, we would expect: the `.fasta` file containing the unaligned sequences; the multiple sequence alignment used to construct the tree (`.fasta`, `.msa`, etc.); and the `.newick` (or `.nex`) file for the tree. This is required so that projects can be continued and built upon in future years.
+  - You may find it most convenient to manage your project using standard computational biology tools, such as version control (e.g. `git` and GitHub). We would also find that convenient and strongly recommend it.
 
 ### Teamwork and collegiality
 
-- [Group Code of Conduct {{< bi link >}}](https://sipbs-compbiol.github.io/group/code_of_conduct)
+- [Group Code of Conduct {{< bi link >}}](https://sipbs-compbiol.github.io/code_of_conduct.html)
 
-- **I expect you to help each other**. In particular, some of you will have more experience than others in the group, when using computational and bioinformatics tools. You are all doing different projects, but you are using similar tools and techniques. I expect you to share knowledge and understanding kindly with one another.
+- **We expect you to help each other**. In particular, some of you may have more experience than others in the group, when using computational and bioinformatics tools. You are all doing different projects, but you are using similar tools and techniques. We expect you to share knowledge and understanding kindly with one another.
   - **Science is a team effort and it benefits from people working together in groups**. We can accomplish more together than one person working alone can. 
   - Listen respectfully to each other, learn from each other, and contribute as you can.
   - Be respectful of others' different life experiences. Learn from them when appropriate, and contribute when appropriate. Do not insult or put down people who share their experiences. 
@@ -68,8 +68,8 @@ Please read through these expectations and guidelines and bring any questions or
 
 ### Good Communication
 
-- [How to ask for feedback {{< bi link >}}](https://sipbs-compbiol.github.io/student/getting-good-feedback/)
-- [How to ask good questions {{< bi link >}}](https://sipbs-compbiol.github.io/student/asking-good-questions/)
+- [How to ask for feedback {{< bi link >}}](https://sipbs-compbiol.github.io/posts/2022-06-01-getting-good-feedback.html)
+- [How to ask good questions {{< bi link >}}](https://sipbs-compbiol.github.io/posts/2022-06-27-asking-good-questions.html)
 - **Be clear, open, and honest in your communication**
 
 ::: {.callout-caution}
@@ -78,16 +78,16 @@ I cannot help if you don't let me know that there's a problem.
 
 - We will meet at least once a week in person or via Zoom (individual and/or group meetings).
   - Zoom etiquette: turning your camera, microphone on/off is completely up to you, no pressure either way.
-- Between meetings, I'm available by email to answer questions or you can schedule a drop-in Zoom or 1:1 meeting (depending on our schedules).
+- Between meetings, We're available by email to answer questions or you can schedule a drop-in Zoom or 1:1 meeting (depending on our schedules).
 - **Don't be afraid to ask for help**. You have many resources to call on, including:
-  - Me (...this is literally my job!)
+  - Dr Pritchard or Dr Feeney (...this is literally our job!)
   - Each other. **Please do talk to and help each other!** - we call this "_Peer Learning_" and it's deliberately part of the project. It's not cheating or plagiarism.
   - Anyone else in the SIPBS CompBiol Group
   - The Microbiology group
   - Ask questions in your lectures/open office sessions
   - [Stack Overflow](https://stackoverflow.com/), [Bioinformatics Stack Exchange](https://bioinformatics.stackexchange.com/) and other specialist sites
-  - Social Media (it can be a great place to crowdsource science questions, but it can also be a cesspool)
-- **Take ownership of your project**. I am here to help and to guide you, but this is not my thesis (I have already done one!)
+  - Social Media (it can be a great place to crowdsource science questions, but it can also be a cesspool, so tread carefully)
+- **Take ownership of your project**. We are here to help and to guide you, but this is not my thesis (We have already done more than one!)
   - Come to meetings prepared.
   - Think independently and critically
   - Read broadly 
@@ -100,25 +100,25 @@ Sites like Stack Overflow and Stack Exchange, while extremely useful and valuabl
 All of the above contributes to your project performance mark
 :::
 
-- **Don't be afraid to tell me that you think I'm wrong.** I'm a scientist. I'm probably wrong at least half the time - that's how things are.
-  - Your data may contradict my hypotheses or ideas. That's how science works.
-  - You will probably find something in the literature that I wasn't aware of. I'll be interested to hear about it.
-  - You may well have insights and clever thoughts that I won't have. You are closer to your project than I am, and that will generate insight for you which is inaccessible to me.
+- **Don't be afraid to tell us (anyone!) that you think we're (they're) wrong.** We're scientists. We're probably wrong at least half the time - that's how things are.
+  - Your data may contradict our hypotheses or ideas. That's also how science works.
+  - You will probably find something in the literature that we were not aware of. We'll be interested to hear about it.
+  - You may well have insights and clever thoughts that we won't have. You are closer to your project than we are, and that will generate insight for you which is inaccessible to us. Trust yourself.
   - Doing science can involve challenges to accepted dogma, and the Scientific Method requires us to prove ideas (usually our own ideas!) wrong. Be bold.
 
-## What you should expect from me
+## What you should expect from us
 
 - Kindness, team-work, and collegiality
 - Advice and guidance on planning and carrying out your experiments
 - Guidance on how to write a scientific document
 - Feedback on drafts and practice presentation
 - Good communication
-- Email responses within a working day (I will do my absolute best)
+- Email responses within a working day (We will do our absolute best)
 - Feedback on project performance
 - References
   
 ::: {.callout-note}
-If you want to name me as a reference there's no need to ask for permission, but I do appreciate as much notice as possible. I want to encourage an employer to hire you/a course to take you on so, if you can send me your CV and a couple of points you'd like me to highlight, so much the better!
+If you want to name either of us as a reference there's no need to ask for permission, butwe do appreciate as much notice as possible. We want to encourage an employer to hire you/a course to take you on so, if you can send us your CV and a couple of points you'd like to be highlighted, so much the better!
 :::
 
 ::: {.callout-tip}
