@@ -20,10 +20,10 @@ website:
         menu: 
           - text: "Key Dates (BM954)"
             href: calendar.qmd
-          - text: "SOP (BM954)"
-            href: sop.qmd
-          - text: "Key Dates (IBioIC)"
-            href: calendar_ibioic.qmd
+          # - text: "SOP (BM954)"
+          #  href: sop.qmd
+          #- text: "Key Dates (IBioIC)"
+          #  href: calendar_ibioic.qmd
           - text: "Project Expectations"
             href: expectations.qmd
           - text: "Project and Time Management"
@@ -61,7 +61,7 @@ website:
       - icon: rss
         href: index.xml  
   page-footer: 
-    left: This site © University of Strathclyde 2024
+    left: This site © University of Strathclyde 2023-2026
 
 
 format:

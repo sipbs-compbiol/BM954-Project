@@ -13,3 +13,6 @@ _freeze
 # Ignore macOS files
 .DS_Store
 
+# Ignore RStudio/posit cruft
+.positai
+**/*.quarto_ipynb

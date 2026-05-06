@@ -22,19 +22,6 @@ html:
 
 This page provides links to software tools and packages - some with web interfaces, some you would need to download and install - that may be useful for your project.
 
-::: { .callout-important }
-## Required software for BM954 in {{< var ay >}}
-
-This year's project students will be analysing the distribution and evolution of CAZymes across bacterial genomes. In order to do this, specialised packages are required, that were developed within this group. Please use the links below for documentation on how to install and use this software.
-
-- [`cazy_webscraper`](https://hobnobmancer.github.io/cazy_webscraper/) - _a tool for collating and organising, in a local database, CAZymes and associated data (e.g. sequences, structures, etc.)_
-- [`cazomeevolve`](https://hobnobmancer.github.io/cazomevolve/) - _a tool for analysing the evolution of CAZymes in microbial genomes_
-
-**Relevant publications**
-
-- [Hobbs _et al._ (2023)](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.001086)
-:::
-
 ## Programming
 
 - [Visual Studio Code](https://code.visualstudio.com/) - _An excellent editor for writing your own code, in any language, with support for a wide range of helpful extensions - LP_

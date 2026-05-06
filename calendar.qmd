@@ -41,16 +41,9 @@ This is an **indicative** calendar for SIPBS CompBiol Group BM954 projects in {{
 ::: {.callout-important}
 The university is closed on the following dates:
 
-- 2025-05-26
-- 2025-07-18
-- 2025-07-21
-:::
-
-::: {.callout-important}
-Dr Pritchard is unavailable on the following dates:
-
-- 2025-06-06
-- 2025-07-17 to 2025-07-27
+- 2025-05-25 (Monday)
+- 2025-07-17 (Friday)
+- 2025-07-20 (Monday)
 :::
 
 ### Summer {{< var ay >}}

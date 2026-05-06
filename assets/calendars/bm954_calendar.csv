@@ -1,28 +1,40 @@
 Week,Date & Time,Activity,Responsibility
-1,w/b Mon 12th May,<u> Suggested activities</u>  <br /> - Students contact supervisors <br> - Read papers in project description <br> - Begin literature search <br> - Install and configure bioinformatics tools
-1,w/b Mon 12th May <br> TBC,<u> Project Meeting</u>  <br> - Introduction <br> - Project description <br> - Project expectations <br> - Learning agreement <br> - Project management resources,LP
-2,w/b 19th May,<u> Suggested activities</u>  <br> - Continue literature search <br> - Practice project management tools <br> - Practice computational and bioinformatics tools
-2,w/b 19th May <br> TBC,<u> Project Meeting</u>  <br> - Discuss tasks for next week (incl. choose one paper each for mini journal club) <br> - Computational and bioinformatics tools,LP
-3,w/b 26th May,<u> Suggested activities</u>  <br> - Continue literature search <br> - Practice computational and bioinformatics tools <br> - Begin project work
-3,w/b 26th May <br> TBC,<u> Project Meeting</u>  <br> - Mini journal club. Each student leads a short (15min) discussion of their chosen paper <br> - Discuss project progress,LP
-4,w/b 2nd June,<u> Suggested activities</u>  <br> - Continue project work <br> - Write thesis introduction
-4,w/b 2nd June <br> TBC,<u> Project Meeting</u>  <br> - How to write a project thesis <br> - Discuss project progress,LP
-4,Thu 5th June,<b>Draft Introduction/Literature Review submission deadline</b>,Student
-5,w/b 9th June,<u> Suggested activities</u>  <br> - Continue literature search <br> - Writing thesis outline
-5,w/b 9th June <br> TBC,<u> Project Meeting</u>  <br> - Discussion of thesis outlines <br> - Project planning discussion,LP
-6,w/b 16th June,<u> Suggested activities</u>  <br> - Project work
-6,w/b 16th June <br> TBC,<u> Project Meeting</u>  <br> - Project planning discussion <br> - Discussion of thesis outlines,LP
-7,w/b 23rd June,<u> Suggested activities</u>  <br> - Project work
-7,w/b 23rd June,<u> Project Meeting</u>  <br> - Project planning discussion <br> - Discussion of thesis outlines,LP
-8,w/b 30th June,<u> Suggested activities</u>  <br> - Project work
-8,w/b 30th June,<u> Project Meeting</u>  <br> - Project planning discussion <br> - Discussion of thesis outlines,LP
-9,w/b 7th July,<u> Suggested activities</u>  <br> - Project work
-9,w/b 9th July,<u> Project Meeting</u>  <br> - Project planning discussion <br> - Discussion of thesis outlines,LP
-9,Monday 7th July,<b>Draft thesis submission deadline</b>,Student
-10,w/b 14th July,<u> Suggested activities</u>  <br> - Project work
-10,w/b 14th July,<u> Project Meeting</u>  <br> - Project planning discussion <br> - Discussion of thesis outlines,LP
-11,w/b 21st July,<u> Suggested activities</u>  <br> - Thesis writing
-11,w/b 21st July,Feedback on draft thesis returned,LP
-12,w/b 28th July,<u> Suggested activities</u>  <br> - Thesis writing
-13,w/b 4th August,<b>Thesis submission deadline</b> and presentation
-14,w/b 11th August,Presentation week
+1,w/b Mon 11th May,<u> Suggested activities</u>  <br /> - Work through Carpentries material and self-assess <br> - Read papers in project description <br> - Begin literature search <br> - Set up GitHub repository (See [<a href="https://sipbs-compbiol.github.io/template_bioinformatics_project/">link</a>])
+1,Mon 11th May <br> HW614 <br> 11:30-12:30,<u> Project Meeting</u> <br> Check-in and weekly planning,LP/MF
+1,Fri 15th May <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> - Group meeting: 3-5 slides on progress,LP/MF/Students
+2,w/b 18th May,<u> Suggested activities</u>  <br> - Continue literature search <br> - Prepare draft literature review <br> - Skill development based on self-assessment
+2,Mon 18th May <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> Check-in and weekly planning,LP/MF
+2,Thu 21st May <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> - Group meeting: 3-5 slides on progress,LP/MF/Students
+3,w/b 25th May,<u> Suggested activities</u>  <br> - Continue literature search <br> - Prepare draft literature review <br> - Skill development based on self-assessment
+3,Tue 26th May <br> TBC <br> 14:30-15-30,<u> Project Meeting</u> <br> Check-in and weekly planning,LP/MF
+3,Thu 28th May <br> TBC <br> 14:00-15:00,<u> Project Meeting</u> <br> - Group meeting: 3-5 slides on progress  <br> - <b>Journal club presentation</b>,LP/MF/Students,LP/MF/Students
+4,w/b 1st June,<u> Suggested activities</u>  <br> - Continue literature search <br> - Prepare draft literature review <br> - Skill development based on self-assessment
+4,Mon 1st June <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> Check-in and weekly planning,LP/MF
+4,Fri 5th June <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> - Group meeting: 3-5 slides on progress
+4,Fri 5th June,<b>Draft introduction/literature review submission deadline</b>,Student
+5,w/b 8th June,<u> Suggested activities</u>  <br> - Collect public data (e.g. sequence homologues/structures) <br> - Writing thesis outline
+5,Mon 8th June <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> Check-in and weekly planning,LP/MF
+5,Fri 12th June <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> - Group meeting: 3-5 slides on progress,LP/MF/Students
+6,w/b 15th June,<u> Suggested activities</u>  <br> - Collect public data (e.g. sequence homologues/structures)
+6,Mon 15th June <br> TBC <br> 14:30-15:30,<u> Project Meeting</u> <br> Check-in and weekly planning,LP/MF
+6,Fri 19th June <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> - Group meeting: 3-5 slides on progress,LP/MF/Students
+7,w/b 22nd June,<u> Suggested activities</u>  <br> - Project work (e.g. generating trees/investigating sequence/structure relationships)
+7,Mon 22nd June <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> Check-in and weekly planning,LP/MF
+7,Fri 26th June <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> - Group meeting: 3-5 slides on progress,LP/MF/Students
+8,w/b 29th June,<u> Suggested activities</u>  <br> - Project work (e.g. generating trees/investigating sequence/structure relationships)
+8,Mon 29th June <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> Check-in and weekly planning,LP/MF
+8,Fri 3rd July <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> - Group meeting: 3-5 slides on progress,LP/MF/Students
+9,w/b 6th July,<u> Suggested activities</u>  <br> - Project work (e.g. generating trees/investigating sequence/structure relationships)
+9,Mon 6th July,<b>Draft thesis submission deadline</b>,Student
+9,Mon 6th July <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> Check-in and weekly planning,LP/MF
+9,Fri 10th July <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> - Group meeting: 3-5 slides on progress,LP/MF/Students
+10,w/b 13th July,<u> Suggested activities</u>  <br> - Integrating results with literature
+10,Mon 13th July <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> Check-in and weekly planning,LP/MF
+10,Thu 16th July <br> TBC <br> 11:30-12:30,<u> Project Meeting</u> <br> - Group meeting: 3-5 slides wrapping up progress,LP/MF/Students
+11,w/b 20th July,<u> Suggested activities</u>  <br> - Thesis prep week
+11,w/b 20th July,Feedback on draft thesis returned,LP/MF
+12,w/b 27th July,<u> Suggested activities</u>  <br> - Thesis prep week
+13,w/b 3rd August,<b>Thesis submission deadline</b>,Student
+14,w/b 10th August
+15,w/b 17th August,Presentation week
+16,w/b 24th August,Presentation week

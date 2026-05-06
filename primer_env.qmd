@@ -104,11 +104,10 @@ Before beginning this part of the guide, you should make yourself familiar with 
 
 On Mac and Linux, this is usually a straightforward software installation, and you can follow the instructions at the link below:
 
-- [Installing Anaconda on Mac and Linux](https://docs.anaconda.com/free/anaconda/install/index.html)
+- [Installing Miniconda on Mac and Linux](https://www.anaconda.com/docs/getting-started/miniconda/install/overview)
 
-On Windows, you _must_ distinguish between installing Anaconda under Windows, and installing it under WSL (Windows Subsystem Linux). You will be using WSL for your project, and you **must** install `conda` within WSL (WSL _cannot_ see the version of `conda` installed under the Windows operating system; in any case the software that runs on a Linux OS will not typically run on a Windows OS). There are several online guides to help with this.
+On Windows, you _must_ distinguish between installing Anaconda under Windows, and installing it under WSL (Windows Subsystem Linux). If you use a Windows machine, you will be using WSL for your project, and you **must** install `conda` within WSL (WSL _cannot_ see the version of `conda` installed under the Windows operating system; in any case the software that runs on a Linux OS will not typically run on a Windows OS). There are several online guides to help with this.
 
-- [Installing Conda/Anaconda in WSL](https://www.how2shout.com/how-to/install-anaconda-wsl-windows-10-ubuntu-linux-app.html)
 - [Installing Miniconda in WSL](https://kontext.tech/article/1064/install-miniconda-and-anaconda-on-wsl-2-or-linux)
 :::
 
@@ -180,7 +179,6 @@ Before installing `bioconda` you should be awware of the information at the link
 To set up the `bioconda` channel on your computer, you should follow the instructions at the [`bioconda` website](https://bioconda.github.io/), and issue the four commands below, in sequence:
 
 ```bash
-conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
 conda config --set channel_priority strict
@@ -197,8 +195,7 @@ To install the `ncbi-genome-download` package, we use the `conda install` comman
  Channels:
  - conda-forge
  - bioconda
- - defaults
-Platform: osx-64
+ latform: osx-64
 Collecting package metadata (repodata.json):
 [...]
 The following NEW packages will be INSTALLED:
